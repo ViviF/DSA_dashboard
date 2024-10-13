@@ -130,7 +130,7 @@ def generate_control_card():
                     html.Div(
                         id="componente-fecha",
                         children=[
-                            dcc.DatePickerSingle(
+                                dcc.DatePickerSingle(
                                 id='datepicker-inicial',
                                 min_date_allowed=min(data.index.date),
                                 max_date_allowed=max(data.index.date),
@@ -246,4 +246,4 @@ def update_output_div(date, hour, proy):
 
 # Run the server
 if __name__ == "__main__":
-    app.run_server(debug=True)
+    app.run_server(host = "0.0.0.0", debug=True)
